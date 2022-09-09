@@ -1,5 +1,6 @@
 import os
 from pprint import pprint
+from config import ROOT_CUSTOMERS_FOLDER
 
 """
 :: Directory Structure ::
@@ -21,67 +22,7 @@ from pprint import pprint
                         CB S Lipan St.TCP
 """
 
-foldersToCreate = [
-    {
-        "Name": "2022",
-        "Subfolders": [
-            {
-                "Name": "PDF"
-            },
-            {
-                "Name": "TCP"
-            }
-        ]
-    },
-    {
-        "Name": "2021",
-        "Subfolders": [
-            {
-                "Name": "PDF"
-            },
-            {
-                "Name": "TCP"
-            }
-        ]
-    },
-    {
-        "Name": "Archive",
-        "Subfolders": [
-            {
-                "Name": "2020",
-                "Subfolders": [
-                    {
-                        "Name": "PDF",
-                    },
-                    {
-                        "Name": "TCP"
-                    }
-                ]
-            },
-            {
-                "Name": "2019",
-                "Subfolders": [
-                    {
-                        "Name": "PDF",
-                    },
-                    {
-                        "Name": "TCP"  # ! SHOULD BE ABLE TO GO AS DEEP AS NEEDED
-                    }
-                ]
-            },
-            {
-                "Name": "Other",
-            },
-        ]
-    }
-]
-
-ROOT_CUSTOMERS_FOLDER = r"C:\Users\mitch\Documents\Programming\Repositories\Plans-Directory-Structunator\TEST_ROOT_DRIVE\CUSTOMERS\TestCustomer"
-os.chdir(ROOT_CUSTOMERS_FOLDER)
-CWD = os.getcwd()
-
-
-def create_folders(DictTree, Path = str()):  # ! This Is a Realll ugly way to do this but it works for now. Please Do Better Recursion Later
+def create_directory_list(DictTree, Path = str()):  # ! This Is a Really ugly way to do this but it works for now. Please Do Better Recursion Later
     folders = []
 
     def dict_to_dir(DictTree, Path = str()):
@@ -99,8 +40,4 @@ def create_folders(DictTree, Path = str()):  # ! This Is a Realll ugly way to do
                 dict_to_dir(i, currentRoot)
 
     dict_to_dir(DictTree, Path)
-
     return folders
-
-pprint(create_folders(foldersToCreate))
-
