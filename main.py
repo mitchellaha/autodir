@@ -6,29 +6,11 @@ from url_maker import create_TCR_shortcut
 from mongo import get_customers
 
 
-ROOT_CUSTOMERS_FOLDER = r"C:\Users\MitchAndrews\NotOnedrive\Plans-Directory-Structunator\TEST_ROOT_DRIVE\CUSTOMERS"
+ROOT_CUSTOMERS_FOLDER = r"C:\Users\mitch\Documents\Programming\Repositories\Plans-Directory-Structunator\TEST_ROOT_DRIVE\CUSTOMERS"
 os.chdir(ROOT_CUSTOMERS_FOLDER)
 CWD = os.getcwd()
 
-"""
-:: Directory Structure ::
-- Plans Drive
-    -> CUSTOMERS
-        -> A
-            ...
-        -> B
-            ...
-        -> C
-            -> Customer Contractor
-            -> Barricade
-                TCR - Barricade.url
-                -> 2022
-                    -> PDF
-                        CB S Lipan St.M1.01.PDF
-                        CB S Lipan St.M2.01.PDF
-                    -> TCP
-                        CB S Lipan St.TCP
-"""
+
 
 voidListTest = ["Voided Customer"]
 customerListTest = [
@@ -53,62 +35,6 @@ customerListTest = [
         "CustomerID": 0000000
     }
     ]
-
-foldersToCreate = [
-    {
-        "Name": "2022",
-        "Subfolders": [
-            {
-                "Name": "PDF"
-            },
-            {
-                "Name": "TCP"
-            }
-        ]
-    },
-    {
-        "Name": "2021",
-        "Subfolders": [
-            {
-                "Name": "PDF"
-            },
-            {
-                "Name": "TCP"
-            }
-        ]
-    },
-    {
-        "Name": "Archive",
-        "Subfolders": [
-            {
-                "Name": "2020",
-                "Subfolders": [
-                    {
-                        "Name": "PDF",
-                    },
-                    {
-                        "Name": "TCP"
-                    }
-                ]
-            },
-            {
-                "Name": "2019",
-                "Subfolders": [
-                    {
-                        "Name": "PDF",
-                    },
-                    {
-                        "Name": "TCP"
-                    }
-                ]
-            },
-            {
-                "Name": "Other",
-            },
-        ]
-    }
-]
-
 
 
 def customer_folder_creator(CustomerList):

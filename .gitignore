@@ -1,3 +1,6 @@
+# Project
+TEST_ROOT_DRIVE/CUSTOMERS/*
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
