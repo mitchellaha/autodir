@@ -1,1 +1,1 @@
-# Plans-Directory-Structunator
+# auto-dir

@@ -1,39 +1,14 @@
 import os
-from pprint import pprint as pp
 import re
 
-from directory_maker import create_lettered_folders, create_directory_if_not_exist, create_directory_list, create_subdir_list
-from url_maker import create_TCR_shortcut
-from mongo import get_customers
-from config import foldersToCreate, ROOT_CUSTOMERS_FOLDER, IGNORED_CUSTOMERS
+from helpers.directory_maker import create_lettered_folders, create_directory_if_not_exist, create_directory_list, create_subdir_list
+from helpers.url_maker import create_TCR_shortcut
+from helpers.mongo import get_customers
+from config import foldersToCreate, ROOT_FOLDER, IGNORED_CUSTOMERS
 
 
-os.chdir(ROOT_CUSTOMERS_FOLDER)
+os.chdir(ROOT_FOLDER)
 CWD = os.getcwd()
-
-
-customerListTest = [
-    {
-        "CustomerName": "Barricade",
-        "CustomerID": 6666666
-    },
-    {
-        "CustomerName": "Cranes",
-        "CustomerID": 7777777
-    },
-    {
-        "CustomerName": "Scott",
-        "CustomerID": 8888888
-    },
-    {
-        "CustomerName": "Rail Services",
-        "CustomerID": 9999999
-    },
-    {
-        "CustomerName": "Voided Customer",
-        "CustomerID": 0000000
-    }
-]
 
 
 def customer_folder_creator(CustomerList):

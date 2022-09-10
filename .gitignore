@@ -1,5 +1,6 @@
 # Project
 TEST_ROOT_DRIVE/CUSTOMERS/*
+.no_git/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
