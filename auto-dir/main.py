@@ -1,7 +1,7 @@
 import os
 import re
 
-from helpers.directory_maker import create_lettered_folders, create_directory_if_not_exist, create_directory_list, create_subdir_list
+from helpers.directory_maker import create_lettered_folders, create_directory_if_not_exist, create_subdir_list
 from helpers.url_maker import create_TCR_shortcut
 from helpers.mongo import get_customers
 from config import foldersToCreate, ROOT_FOLDER, IGNORED_CUSTOMERS
