@@ -4,9 +4,9 @@ load_dotenv()
 
 
 MONGO_SRV = os.getenv("MONGO_SRV")
-ROOT_FOLDER = r"C:\Users\mitch\Documents\Programming\Repositories\Plans-Directory-Structunator\TEST_ROOT_DRIVE\CUSTOMERS"
+ROOT_FOLDER = r"C:\Users\mitch\Documents\Programming\Repositories\auto-dir\TEST_ROOT_DRIVE"
 
-IGNORED_CUSTOMERS = ["Voided Customer", "Voided Customer TWO"]
+IGNORED_DIRECTORIES = ["Voided Directory"]
 
 standardTwoDirs = [
     {
