@@ -1,1 +1,1 @@
-from main import autodir
+from .main import autodir

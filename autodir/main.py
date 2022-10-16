@@ -1,4 +1,4 @@
-from modules.directory_maker import create_directory_from_tree, create_directory_if_not_exist
+from .modules.directory_maker import create_directory_from_tree, create_directory_if_not_exist
 
 
 def autodir(DirStructure:list, RootFolder:str):
