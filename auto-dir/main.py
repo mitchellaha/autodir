@@ -1,24 +1,30 @@
-import os
-
-from helpers.directory_maker import create_directory_from_tree, create_directory_if_not_exist
-from config import foldersToCreate, ROOT_FOLDER
+from modules.directory_maker import create_directory_from_tree, create_directory_if_not_exist
 
 
-os.chdir(ROOT_FOLDER)
-CWD = os.getcwd()
+def autodir(DirStructure:list, RootFolder:str):
+    """Creates The Structured Directory from BlockList
 
-customerList = ["CustomerOne", "CustomerTwo", "CustomerThree"]
-
-def main():
-    for customer in customerList:
-        customerDirectory = os.path.join(ROOT_FOLDER, customer)  # Z:\Repositories\auto-dir\TEST_ROOT_DRIVE\CustomerOne
-        create_directory_if_not_exist(customerDirectory)  # Creates Root Customer Directory /\
-        create_directory_from_tree(customerDirectory, foldersToCreate)
+    Args:
+        DirStructure (list): The BlockList to Create
+        RootFolder (str): The Folder to Create It In
+    """
+    create_directory_if_not_exist(RootFolder)
+    create_directory_from_tree(DirStructure, RootFolder)
 
 
 if __name__ == "__main__":
     import time
+    import os
+    from config import dirStructure, ROOT_FOLDER
+
     start_time = time.time()
+
+    MAIN_FOLDERS = ["FolderOne", "FolderTwo", "FolderThree"]
+
+    def main():
+        for folderName in MAIN_FOLDERS:
+            mainDirPath = os.path.join(ROOT_FOLDER, folderName)  # Z:\Repositories\auto-dir\TEST_ROOT_DRIVE\FolderOne
+            autodir(dirStructure, mainDirPath)
     
     main()
 

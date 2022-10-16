@@ -1,7 +1,17 @@
+## Sample Block
+# {
+#     "Name": "File/Folder Name",
+#     "Type": "Folder/Shortcut",
+#     "Config": {  # Required For Shortcuts
+#         "IconPath": "Z:\\assets\\github.ico",
+#         "Link": "https://google.com"
+#     },
+#     "Subfolders": list,  # Required For Folders
+# }
+## Sample Block
 
 ROOT_FOLDER = r"Z:\Repositories\auto-dir\TEST_ROOT_DRIVE"
 
-IGNORED_DIRECTORIES = ["Voided Directory Name"]
 
 standardTwoDirs = [
     {
@@ -16,7 +26,7 @@ standardTwoDirs = [
     }
 ]
 
-foldersToCreate = [
+dirStructure = [
     {
         "Name": "2022",
         "Type": "Folder",
@@ -33,9 +43,13 @@ foldersToCreate = [
         "Subfolders": None
     },
     {
-        "Name": "TCR",
+        "Name": "Github",
         "Type": "Shortcut",
-        "IconPath": "Z:\\Repositories\\auto-dir\\assets\\github.ico"
+        "Config": {
+            "IconPath": "Z:\\Repositories\\auto-dir\\assets\\github.ico",
+            "Link": "https://github.com"
+        }
+        
     },
     {
         "Name": "Archive",
