@@ -11,8 +11,8 @@ customerList = ["CustomerOne", "CustomerTwo", "CustomerThree"]
 
 def main():
     for customer in customerList:
-        customerDirectory = os.path.join(ROOT_FOLDER, customer)
-        create_directory_if_not_exist(customerDirectory)
+        customerDirectory = os.path.join(ROOT_FOLDER, customer)  # Z:\Repositories\auto-dir\TEST_ROOT_DRIVE\CustomerOne
+        create_directory_if_not_exist(customerDirectory)  # Creates Root Customer Directory /\
         create_directory_from_tree(customerDirectory, foldersToCreate)
 
 
